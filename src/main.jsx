@@ -1,10 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+import { BrowserRouter } from 'react-router-dom'
+import { routes } from './routes';
+import { useRoutes } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+export const MainRoutes = () => {
+  const elementRoutes = useRoutes(routes)
+  return (
+    <>
+      {elementRoutes}
+      <Toaster position="bottom-right" reverseOrder={true} />
+    </>
+  )
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <MainRoutes></MainRoutes>
+    </BrowserRouter>
   </React.StrictMode>,
 )

@@ -1,0 +1,33 @@
+
+.dashboard-container {
+    width: 100vw;
+    height: auto;
+    background-image: url('./../../assets/images/patronBackground.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    border-bottom: 2px solid red;
+    box-sizing: border-box;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./../../assets/images/backgroundHeader.jpg');
+    background-position: center center;
+}
+
+.content-container {
+    /* Ajustado para que comience después del encabezado */
+    margin-top: 30vh;
+    height: calc(100vh - 300px);
+    /* Ajustado para ocupar el espacio restante */
+    width: 100%;
+    /* Ajustado para ocupar todo el ancho */
+    overflow-x: hidden;
+}
